@@ -1,2 +1,1 @@
-# AGS-Game
-Jack Tales
+AGS Game
