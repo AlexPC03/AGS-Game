@@ -46,19 +46,19 @@
       <LeftToRightPrecedence>True</LeftToRightPrecedence>
       <PlaySoundOnScore>0</PlaySoundOnScore>
       <CrossfadeMusic>No</CrossfadeMusic>
-      <DialogOptionsGUI>0</DialogOptionsGUI>
-      <DialogOptionsGap>0</DialogOptionsGap>
-      <DialogOptionsBullet>103</DialogOptionsBullet>
+      <DialogOptionsGUI>3</DialogOptionsGUI>
+      <DialogOptionsGap>5</DialogOptionsGap>
+      <DialogOptionsBullet>0</DialogOptionsBullet>
       <SkipSpeech>MouseOrKeyboardOrTimer</SkipSpeech>
-      <SpeechStyle>Lucasarts</SpeechStyle>
+      <SpeechStyle>SierraTransparent</SpeechStyle>
       <UseGlobalSpeechAnimationDelay>False</UseGlobalSpeechAnimationDelay>
       <GlobalSpeechAnimationDelay>5</GlobalSpeechAnimationDelay>
-      <NumberDialogOptions>None</NumberDialogOptions>
+      <NumberDialogOptions>Normal</NumberDialogOptions>
       <DialogOptionsBackwards>False</DialogOptionsBackwards>
-      <SpeechPortraitSide>Left</SpeechPortraitSide>
+      <SpeechPortraitSide>Right</SpeechPortraitSide>
       <DialogScriptSayFunction IsNull="True" />
       <DialogScriptNarrateFunction IsNull="True" />
-      <TextWindowGUI>0</TextWindowGUI>
+      <TextWindowGUI>3</TextWindowGUI>
       <AlwaysDisplayTextAsSpeech>False</AlwaysDisplayTextAsSpeech>
       <AntiAliasFonts>False</AntiAliasFonts>
       <ThoughtGUI>0</ThoughtGUI>
@@ -965,6 +965,200 @@
               </GUIButton>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <OnClick />
+              <Height>64</Height>
+              <Width>128</Width>
+              <Left>0</Left>
+              <Top>100</Top>
+              <Clickable>True</Clickable>
+              <Visible>True</Visible>
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ZOrder>0</ZOrder>
+              <BorderColor>2</BorderColor>
+              <Transparency>0</Transparency>
+              <BackgroundColor>8</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>2</ID>
+              <Name>gTestButtonsGUI</Name>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <OnClick>Button9_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>goto</Text>
+                <Height>57</Height>
+                <Locked>False</Locked>
+                <Width>55</Width>
+                <Left>4</Left>
+                <Top>3</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name>Button9</Name>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Visible>True</Visible>
+              </GUIButton>
+              <GUIButton>
+                <OnClick>Button10_OnClick</OnClick>
+                <ClickAction>RunScript</ClickAction>
+                <NewModeNumber>0</NewModeNumber>
+                <ClipImage>False</ClipImage>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <Font>0</Font>
+                <PushedImage>0</PushedImage>
+                <MouseoverImage>0</MouseoverImage>
+                <Image>0</Image>
+                <Text>start</Text>
+                <Height>57</Height>
+                <Locked>False</Locked>
+                <Width>55</Width>
+                <Left>65</Left>
+                <Top>3</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name>Button10</Name>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Visible>True</Visible>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <TextWindowGUI>
+              <TextColor>0</TextColor>
+              <Padding>3</Padding>
+              <BackgroundColor>8</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <ID>3</ID>
+              <Name>gTextWindowGUI_01</Name>
+            </TextWindowGUI>
+            <Controls>
+              <GUITextWindowEdge>
+                <Image>127</Image>
+                <Height>16</Height>
+                <Locked>False</Locked>
+                <Width>16</Width>
+                <Left>0</Left>
+                <Top>0</Top>
+                <ZOrder>0</ZOrder>
+                <ID>0</ID>
+                <Name />
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Visible>True</Visible>
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>125</Image>
+                <Height>16</Height>
+                <Locked>False</Locked>
+                <Width>16</Width>
+                <Left>0</Left>
+                <Top>90</Top>
+                <ZOrder>1</ZOrder>
+                <ID>1</ID>
+                <Name />
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Visible>True</Visible>
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>128</Image>
+                <Height>16</Height>
+                <Locked>False</Locked>
+                <Width>16</Width>
+                <Left>180</Left>
+                <Top>0</Top>
+                <ZOrder>2</ZOrder>
+                <ID>2</ID>
+                <Name />
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Visible>True</Visible>
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>126</Image>
+                <Height>16</Height>
+                <Locked>False</Locked>
+                <Width>16</Width>
+                <Left>180</Left>
+                <Top>90</Top>
+                <ZOrder>3</ZOrder>
+                <ID>3</ID>
+                <Name />
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Visible>True</Visible>
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>130</Image>
+                <Height>16</Height>
+                <Locked>False</Locked>
+                <Width>16</Width>
+                <Left>0</Left>
+                <Top>40</Top>
+                <ZOrder>4</ZOrder>
+                <ID>4</ID>
+                <Name />
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Visible>True</Visible>
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>131</Image>
+                <Height>16</Height>
+                <Locked>False</Locked>
+                <Width>16</Width>
+                <Left>180</Left>
+                <Top>40</Top>
+                <ZOrder>5</ZOrder>
+                <ID>5</ID>
+                <Name />
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Visible>True</Visible>
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>132</Image>
+                <Height>16</Height>
+                <Locked>False</Locked>
+                <Width>16</Width>
+                <Left>90</Left>
+                <Top>0</Top>
+                <ZOrder>6</ZOrder>
+                <ID>6</ID>
+                <Name />
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Visible>True</Visible>
+              </GUITextWindowEdge>
+              <GUITextWindowEdge>
+                <Image>129</Image>
+                <Height>16</Height>
+                <Locked>False</Locked>
+                <Width>16</Width>
+                <Left>90</Left>
+                <Top>90</Top>
+                <ZOrder>7</ZOrder>
+                <ID>7</ID>
+                <Name />
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Visible>True</Visible>
+              </GUITextWindowEdge>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -1325,10 +1519,10 @@
         <Characters>
           <Character>
             <ID>0</ID>
-            <ScriptName>cJackSparrowCharacter</ScriptName>
+            <ScriptName>cJackSparrow</ScriptName>
             <RealName xml:space="preserve">Jack Sparrow</RealName>
             <NormalView>1</NormalView>
-            <SpeechView>0</SpeechView>
+            <SpeechView>7</SpeechView>
             <IdleView>0</IdleView>
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
@@ -1341,7 +1535,7 @@
             <MovementSpeedY>0</MovementSpeedY>
             <AnimationDelay>4</AnimationDelay>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
-            <SpeechColor>65535</SpeechColor>
+            <SpeechColor>10</SpeechColor>
             <Solid>True</Solid>
             <Clickable>True</Clickable>
             <UseRoomAreaScaling>True</UseRoomAreaScaling>
@@ -1523,6 +1717,46 @@
               <Event Index="7" />
             </Interactions>
           </Character>
+          <Character>
+            <ID>5</ID>
+            <ScriptName>cTestChar</ScriptName>
+            <RealName xml:space="preserve">New character</RealName>
+            <NormalView>6</NormalView>
+            <SpeechView>8</SpeechView>
+            <IdleView>0</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>100</StartingRoom>
+            <StartX>463</StartX>
+            <StartY>361</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>12</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1">cTestChar_Interact</Event>
+              <Event Index="2">cTestChar_Talk</Event>
+              <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
         </Characters>
       </CharacterFolder>
     </Characters>
@@ -1540,6 +1774,82 @@
 return
 ]]></Script>
             <DialogOptions />
+          </Dialog>
+          <Dialog>
+            <ID>1</ID>
+            <Name>dtest01</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+
+cTestChar: Hola, buenos dias.
+return
+@1
+cJackSparrow: Como te llamas?
+cTestChar: Me llamo NPC DE TESTEO.
+cJackSparrow: Por que tienes la cara de barbosa???
+cTestChar: Buena pregunta...
+return
+@2
+cJackSparrow: Donde estamos?
+cTestChar: Excelente pregunta. Pues nos encontramos en una sala de testeo...
+return
+@3
+cJackSparrow: Dame dinero!!!
+cTestChar: SOY POBRE :(
+return
+@4
+cJackSparrow: Me podrias dar algun item que me ayude en mi aventura?
+cTestChar: Me temo que solo tengo zurullos de coña.
+cJackSparrow: ...
+cTestChar: Quieres uno?
+cJackSparrow: No gracias... creo que mejor intentare escaparme de la isla por mis medios...
+return
+@5
+cJackSparrow: ERES FEISIMO! 
+cTestChar: Gracias, me lo dicen mucho.
+return
+@6
+cJackSparrow: adios.
+stop]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Text xml:space="preserve">Como te llamas?</Text>
+                <Show>True</Show>
+                <Say>False</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Text xml:space="preserve">Donde estamos?</Text>
+                <Show>True</Show>
+                <Say>False</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Text xml:space="preserve">dame dinero.</Text>
+                <Show>True</Show>
+                <Say>False</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Text xml:space="preserve">Dame un item util.</Text>
+                <Show>True</Show>
+                <Say>False</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Text xml:space="preserve">ERES FEISIMO</Text>
+                <Show>True</Show>
+                <Say>False</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Text>adios.</Text>
+                <Show>True</Show>
+                <Say>False</Say>
+              </DialogOption>
+            </DialogOptions>
           </Dialog>
         </Dialogs>
       </DialogFolder>
@@ -1619,10 +1929,10 @@ return
       </MouseCursor>
       <MouseCursor>
         <ID>6</ID>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>31</HotspotX>
+        <HotspotY>33</HotspotY>
         <StandardMode>False</StandardMode>
-        <Image>0</Image>
+        <Image>136</Image>
         <View>0</View>
         <Animate>False</Animate>
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
@@ -1674,7 +1984,7 @@ return
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
         <SourceFilename />
-        <SizeMultiplier>1</SizeMultiplier>
+        <SizeMultiplier>2</SizeMultiplier>
         <VerticalOffset>0</VerticalOffset>
         <LineSpacing>0</LineSpacing>
       </Font>
@@ -1685,7 +1995,7 @@ return
         <OutlineFont>2</OutlineFont>
         <OutlineStyle>UseOutlineFont</OutlineStyle>
         <SourceFilename />
-        <SizeMultiplier>1</SizeMultiplier>
+        <SizeMultiplier>2</SizeMultiplier>
         <VerticalOffset>0</VerticalOffset>
         <LineSpacing>0</LineSpacing>
       </Font>
@@ -1696,7 +2006,7 @@ return
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
         <SourceFilename />
-        <SizeMultiplier>1</SizeMultiplier>
+        <SizeMultiplier>2</SizeMultiplier>
         <VerticalOffset>0</VerticalOffset>
         <LineSpacing>0</LineSpacing>
       </Font>
@@ -1707,7 +2017,7 @@ return
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>Automatic</OutlineStyle>
         <SourceFilename xml:space="preserve">C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame\Fuentes\Fuentes extendidas\AGSFNT3.WFN</SourceFilename>
-        <SizeMultiplier>1</SizeMultiplier>
+        <SizeMultiplier>2</SizeMultiplier>
         <VerticalOffset>0</VerticalOffset>
         <LineSpacing>0</LineSpacing>
       </Font>
@@ -1718,7 +2028,7 @@ return
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
         <SourceFilename xml:space="preserve">C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame\Fuentes\Fuentes extendidas\AGSFNT4.WFN</SourceFilename>
-        <SizeMultiplier>1</SizeMultiplier>
+        <SizeMultiplier>2</SizeMultiplier>
         <VerticalOffset>0</VerticalOffset>
         <LineSpacing>0</LineSpacing>
       </Font>
@@ -2320,6 +2630,21 @@ return
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
+              <Sprite Slot="124" Width="80" Height="160" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\TestAssets\testCharacterGrunch.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>160</ImportHeight>
+                  <ImportWidth>80</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
           <SpriteFolder Name="GUI">
@@ -2797,6 +3122,36 @@ return
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
+                  <Sprite Slot="135" Width="64" Height="64" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\Button\select01.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>64</ImportHeight>
+                      <ImportWidth>64</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="136" Width="64" Height="64" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\Button\pointer02.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>64</ImportHeight>
+                      <ImportWidth>64</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
                 </Sprites>
               </SpriteFolder>
               <SpriteFolder Name="Puzzle">
@@ -2828,6 +3183,156 @@ return
                       <OffsetY>0</OffsetY>
                       <ImportHeight>360</ImportHeight>
                       <ImportWidth>1280</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="125" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\DialogueBox\Corner_BL.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>16</ImportHeight>
+                      <ImportWidth>16</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="126" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\DialogueBox\Corner_BR.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>16</ImportHeight>
+                      <ImportWidth>16</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="127" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\DialogueBox\Corner_UL.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>16</ImportHeight>
+                      <ImportWidth>16</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="128" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\DialogueBox\Corner_UR.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>16</ImportHeight>
+                      <ImportWidth>16</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="129" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\DialogueBox\Side_B.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>16</ImportHeight>
+                      <ImportWidth>16</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="130" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\DialogueBox\Side_L.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>16</ImportHeight>
+                      <ImportWidth>16</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="131" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\DialogueBox\Side_R.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>16</ImportHeight>
+                      <ImportWidth>16</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="132" Width="16" Height="16" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\DialogueBox\Side_U.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>16</ImportHeight>
+                      <ImportWidth>16</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="133" Width="1280" Height="360" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\DialogueBox\testdialog.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>360</ImportHeight>
+                      <ImportWidth>1280</ImportWidth>
+                      <ImportAsTile>False</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="134" Width="360" Height="360" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                    <Source>
+                      <FileName>D:\RecursosAGS\TRABAJOS\Juego Jack Sparrow\GUI\DialogueBox\GUI_Portrait01.png</FileName>
+                      <OffsetX>0</OffsetX>
+                      <OffsetY>0</OffsetY>
+                      <ImportHeight>360</ImportHeight>
+                      <ImportWidth>360</ImportWidth>
                       <ImportAsTile>False</ImportAsTile>
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
@@ -4251,7 +4756,7 @@ return
           </View>
           <View>
             <ID>5</ID>
-            <Name>View5</Name>
+            <Name>Cangrejo</Name>
             <Loops>
               <Loop>
                 <ID>0</ID>
@@ -4281,6 +4786,125 @@ return
                   <ViewFrame>
                     <ID>3</ID>
                     <Image>95</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>6</ID>
+            <Name>testCharView</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>124</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>7</ID>
+            <Name>jackportrait</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>111</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>8</ID>
+            <Name>barbosaportrait</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>112</Image>
                     <Flipped>False</Flipped>
                     <Delay>0</Delay>
                     <Sound>0</Sound>
