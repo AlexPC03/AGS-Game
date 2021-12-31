@@ -1,2 +1,1 @@
-Game : (room:4) Dialog: all options have been turned off, stopping dialog.
-Game : (room:4) Dialog: all options have been turned off, stopping dialog.
+Game : (room:201)[R 10] Wait() was used in Player Enters Screen - use Enters Screen After Fadein instead
