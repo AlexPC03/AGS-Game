@@ -693,6 +693,10 @@
             <Number>201</Number>
             <Description IsNull="True" />
           </UnloadedRoom>
+          <UnloadedRoom>
+            <Number>202</Number>
+            <Description IsNull="True" />
+          </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
     </Rooms>
@@ -1634,7 +1638,7 @@
               <Event Index="0">cMonoCharacter_Look</Event>
               <Event Index="1">cMonoCharacter_Interact</Event>
               <Event Index="2">cMonoCharacter_Talk</Event>
-              <Event Index="3" />
+              <Event Index="3">cMonoCharacter_UseInv</Event>
               <Event Index="4" />
               <Event Index="5" />
               <Event Index="6" />
@@ -1671,9 +1675,9 @@
             <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
             <Properties />
             <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
+              <Event Index="0">cEsqueletoCharacter_Look</Event>
+              <Event Index="1">cEsqueletoCharacter_Interact</Event>
+              <Event Index="2">cEsqueletoCharacter_Talk</Event>
               <Event Index="3" />
               <Event Index="4" />
               <Event Index="5" />
@@ -1691,8 +1695,8 @@
             <ThinkingView>0</ThinkingView>
             <BlinkingView>0</BlinkingView>
             <StartingRoom>4</StartingRoom>
-            <StartX>374</StartX>
-            <StartY>655</StartY>
+            <StartX>459</StartX>
+            <StartY>622</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <MovementSpeed>3</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
@@ -1711,9 +1715,9 @@
             <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
             <Properties />
             <Interactions>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
+              <Event Index="0">cCangrejoCharacter_Look</Event>
+              <Event Index="1">cCangrejoCharacter_Interact</Event>
+              <Event Index="2">cCangrejoCharacter_Talk</Event>
               <Event Index="3" />
               <Event Index="4" />
               <Event Index="5" />
@@ -1882,7 +1886,7 @@ cBarbosaCharacter: Y no tendría que estar desterrándote a esta isla remota.
 cBarbosaCharacter: Pero lo hecho hecho está.
 cBarbosaCharacter: hasta nunca Sparrow.
   cBarbosaCharacter.Walk(-150, 745, eBlock, eAnywhere);
-  Wait(50);
+  Wait(100);
   player.ChangeView(1);
   object[1].Visible=true;
   Wait(30);
@@ -1943,6 +1947,50 @@ stop
 
 ]]></Script>
             <DialogOptions />
+          </Dialog>
+          <Dialog>
+            <ID>4</ID>
+            <Name>dMono2</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cJackSparrow: Vale…
+cJackSparrow: Tú y yo no nos llevamos bien, así que voy a ser lo más directo posible.
+return
+@1
+cMonoCharacter: *****
+cJackSparrow: Vaya…
+cJackSparrow: Entonces no tendré más remedio que tomármelo yo
+cMonoCharacter: *****
+cJackSparrow: Esto no funciona…
+stop
+@2
+cJackSparrow: Suficiente tuve con el macaco de Barbosa como para que tu vengas ahora y me fastidies.
+cMonoCharacter: (Enfadado) ¡Chss…!
+cJackSparrow: Vale, ya me has mosqueado
+  object[0].Visible=true;
+  object[0].Move(172,548,5,eBlock,eAnywhere);
+  object[0].Visible=false;
+  object[1].Visible=true;
+  cMonoCharacter.ChangeView(15);
+  cMonoCharacter.Walk(95,482,eBlock,eAnywhere);
+  cMonoCharacter.ChangeRoom(100);
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Text xml:space="preserve">Tengo un plátano, ¿lo quieres tú?</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Text xml:space="preserve">Coge este plátano y vete</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+            </DialogOptions>
           </Dialog>
           <Dialog>
             <ID>1</ID>
@@ -2017,6 +2065,82 @@ stop]]></Script>
                 <Text>adios.</Text>
                 <Show>True</Show>
                 <Say>False</Say>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>5</ID>
+            <Name>dEsqueleto</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cJackSparrow: No pareces estar en muy buenas condiciones, amigo
+cEsqueletoCharacter: *****
+cJackSparrow: ¿Cómo te llamas muchacho?
+cEsqueletoCharacter: *****
+cJackSparrow: Te llamaré Jorge
+cJackSparrow: ¿No tendrás algo que me ayude a salir de esta isla, Jorge?
+cEsqueletoCharacter: (Se le cae un diente)
+cJackSparrow: ¿Qué es eso que tienes en la boca?
+  player.AddInventory(MapaItem);
+stop
+
+]]></Script>
+            <DialogOptions />
+          </Dialog>
+          <Dialog>
+            <ID>6</ID>
+            <Name>dAtrapado</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cSombra1Char: Y eso hubiera pasado si Jack fuera un impulsivo que no piensa antes de actuar.
+cSombra2Char: ¿No lo era?
+cSombra1Char: Ese no es el caso, 
+cSombra1Char: sigo con la historia.
+  player.ChangeRoom(31,914,724,eDirectionDown);
+  gGUI_ACT_BOTTOM.Visible=true;
+  gGUI_INV_TOP.Visible=true;
+stop
+]]></Script>
+            <DialogOptions />
+          </Dialog>
+          <Dialog>
+            <ID>7</ID>
+            <Name>dCangrejo</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+cJackSparrow: Hola pequeño crustáceo…
+cCangrejoCharacter: ***********
+cJackSparrow: ¿Te gustaría ayudarme a salir de aquí?
+cCangrejoCharacter: ***********
+cJackSparrow: Claro, no te estoy obligando…
+return
+@1
+cCangrejoCharacter: *************
+cJackSparrow: Vale, lo entiendo.
+cJackSparrow: Gracias igualmente…
+stop
+@2
+cCangrejoCharacter: *************
+  player.AddInventory(CangrejoItem);
+  cCangrejoCharacter.ChangeRoom(100);
+stop
+
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Text xml:space="preserve">Si no quieres no pasa nada</Text>
+                <Show>True</Show>
+                <Say>True</Say>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Text xml:space="preserve">Venga, sube.</Text>
+                <Show>True</Show>
+                <Say>True</Say>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -4713,6 +4837,21 @@ stop]]></Script>
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
+              <Sprite Slot="144" Width="1280" Height="720" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                <Source>
+                  <FileName>C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame.old\Portada\AplastadoGrande.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>720</ImportHeight>
+                  <ImportWidth>1280</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>False</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
         </SubFolders>
@@ -5342,6 +5481,25 @@ stop]]></Script>
                   <ViewFrame>
                     <ID>0</ID>
                     <Image>142</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>15</ID>
+            <Name>MonoCae</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>122</Image>
                     <Flipped>False</Flipped>
                     <Delay>0</Delay>
                     <Sound>0</Sound>

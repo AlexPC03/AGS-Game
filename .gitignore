@@ -1,0 +1,6 @@
+
+*.lock
+
+_Debug/
+
+Compiled/Data/
