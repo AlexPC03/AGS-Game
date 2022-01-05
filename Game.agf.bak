@@ -1354,6 +1354,24 @@
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
+          <InventoryItem>
+            <ID>11</ID>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <CursorImage>0</CursorImage>
+            <Image>78</Image>
+            <Description>Red</Description>
+            <Name>RedItem</Name>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
         </InventoryItems>
       </InventoryItemFolder>
     </InventoryItems>
@@ -1578,7 +1596,7 @@
             <StartX>341</StartX>
             <StartY>791</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
-            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeed>7</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
             <MovementSpeedY>0</MovementSpeedY>
             <AnimationDelay>4</AnimationDelay>
@@ -1618,7 +1636,7 @@
             <StartX>175</StartX>
             <StartY>697</StartY>
             <UniformMovementSpeed>True</UniformMovementSpeed>
-            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeed>10</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
             <MovementSpeedY>0</MovementSpeedY>
             <AnimationDelay>4</AnimationDelay>
@@ -1719,6 +1737,46 @@
               <Event Index="1">cCangrejoCharacter_Interact</Event>
               <Event Index="2">cCangrejoCharacter_Talk</Event>
               <Event Index="3" />
+              <Event Index="4" />
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <ID>8</ID>
+            <ScriptName>cTortugaCharacter</ScriptName>
+            <RealName>Tortuga</RealName>
+            <NormalView>16</NormalView>
+            <SpeechView>0</SpeechView>
+            <IdleView>0</IdleView>
+            <ThinkingView>0</ThinkingView>
+            <BlinkingView>0</BlinkingView>
+            <StartingRoom>4</StartingRoom>
+            <StartX>1336</StartX>
+            <StartY>617</StartY>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <MovementSpeed>100</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <AnimationDelay>4</AnimationDelay>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>12</SpeechColor>
+            <Solid>True</Solid>
+            <Clickable>True</Clickable>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <DiagonalLoops>True</DiagonalLoops>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <Properties />
+            <Interactions>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3">cTortugaCharacter_UseInv</Event>
               <Event Index="4" />
               <Event Index="5" />
               <Event Index="6" />
@@ -1885,6 +1943,7 @@ cBarbosaCharacter: Ojalá te huvieras tomado las cosas más en serio Jack.
 cBarbosaCharacter: Y no tendría que estar desterrándote a esta isla remota.
 cBarbosaCharacter: Pero lo hecho hecho está.
 cBarbosaCharacter: hasta nunca Sparrow.
+  cBarbosaCharacter.Animate(1,20,eRepeat,eNoBlock,eForwards);
   cBarbosaCharacter.Walk(-150, 745, eBlock, eAnywhere);
   Wait(100);
   player.ChangeView(1);
@@ -1973,20 +2032,23 @@ cJackSparrow: Vale, ya me has mosqueado
   object[0].Visible=false;
   object[1].Visible=true;
   cMonoCharacter.ChangeView(15);
+  cMonoCharacter.x=180;
+  cMonoCharacter.y=556;
   cMonoCharacter.Walk(95,482,eBlock,eAnywhere);
   cMonoCharacter.ChangeRoom(100);
+  player.LoseInventory(PlatanoItem);
 stop
 ]]></Script>
             <DialogOptions>
               <DialogOption>
                 <ID>1</ID>
-                <Text xml:space="preserve">Tengo un plátano, ¿lo quieres tú?</Text>
+                <Text xml:space="preserve">Tengo un platano, ¿lo quieres tu?</Text>
                 <Show>True</Show>
                 <Say>True</Say>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
-                <Text xml:space="preserve">Coge este plátano y vete</Text>
+                <Text xml:space="preserve">Coge este platano y vete</Text>
                 <Show>True</Show>
                 <Say>True</Say>
               </DialogOption>
@@ -3908,6 +3970,26 @@ stop
                       </Sprite>
                     </Sprites>
                   </SpriteFolder>
+                  <SpriteFolder Name="Montar">
+                    <SubFolders />
+                    <Sprites>
+                      <Sprite Slot="153" Width="117" Height="180" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                        <Source>
+                          <FileName>C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame.old\Sprites+Especiales+Grande.png</FileName>
+                          <OffsetX>192</OffsetX>
+                          <OffsetY>1236</OffsetY>
+                          <ImportHeight>180</ImportHeight>
+                          <ImportWidth>117</ImportWidth>
+                          <ImportAsTile>True</ImportAsTile>
+                          <Frame>0</Frame>
+                          <RemapToGamePalette>False</RemapToGamePalette>
+                          <RemapToRoomPalette>False</RemapToRoomPalette>
+                          <ImportMethod>LeaveAsIs</ImportMethod>
+                          <ImportAlphaChannel>True</ImportAlphaChannel>
+                        </Source>
+                      </Sprite>
+                    </Sprites>
+                  </SpriteFolder>
                 </SubFolders>
                 <Sprites />
               </SpriteFolder>
@@ -4086,6 +4168,131 @@ stop
                       <OffsetY>645</OffsetY>
                       <ImportHeight>45</ImportHeight>
                       <ImportWidth>60</ImportWidth>
+                      <ImportAsTile>True</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                </Sprites>
+              </SpriteFolder>
+              <SpriteFolder Name="Tortuga">
+                <SubFolders />
+                <Sprites>
+                  <Sprite Slot="145" Width="105" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame.old\Sprites+Especiales+Grande.png</FileName>
+                      <OffsetX>285</OffsetX>
+                      <OffsetY>897</OffsetY>
+                      <ImportHeight>60</ImportHeight>
+                      <ImportWidth>105</ImportWidth>
+                      <ImportAsTile>True</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="146" Width="105" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame.old\Sprites+Especiales+Grande.png</FileName>
+                      <OffsetX>438</OffsetX>
+                      <OffsetY>897</OffsetY>
+                      <ImportHeight>60</ImportHeight>
+                      <ImportWidth>105</ImportWidth>
+                      <ImportAsTile>True</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="147" Width="105" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame.old\Sprites+Especiales+Grande.png</FileName>
+                      <OffsetX>588</OffsetX>
+                      <OffsetY>897</OffsetY>
+                      <ImportHeight>60</ImportHeight>
+                      <ImportWidth>105</ImportWidth>
+                      <ImportAsTile>True</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="148" Width="105" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame.old\Sprites+Especiales+Grande.png</FileName>
+                      <OffsetX>714</OffsetX>
+                      <OffsetY>897</OffsetY>
+                      <ImportHeight>60</ImportHeight>
+                      <ImportWidth>105</ImportWidth>
+                      <ImportAsTile>True</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="149" Width="120" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame.old\Sprites+Especiales+Grande.png</FileName>
+                      <OffsetX>282</OffsetX>
+                      <OffsetY>996</OffsetY>
+                      <ImportHeight>60</ImportHeight>
+                      <ImportWidth>120</ImportWidth>
+                      <ImportAsTile>True</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="150" Width="120" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame.old\Sprites+Especiales+Grande.png</FileName>
+                      <OffsetX>438</OffsetX>
+                      <OffsetY>996</OffsetY>
+                      <ImportHeight>60</ImportHeight>
+                      <ImportWidth>120</ImportWidth>
+                      <ImportAsTile>True</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="151" Width="270" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame.old\Sprites+Especiales+Grande.png</FileName>
+                      <OffsetX>147</OffsetX>
+                      <OffsetY>1101</OffsetY>
+                      <ImportHeight>60</ImportHeight>
+                      <ImportWidth>270</ImportWidth>
+                      <ImportAsTile>True</ImportAsTile>
+                      <Frame>0</Frame>
+                      <RemapToGamePalette>False</RemapToGamePalette>
+                      <RemapToRoomPalette>False</RemapToRoomPalette>
+                      <ImportMethod>LeaveAsIs</ImportMethod>
+                      <ImportAlphaChannel>True</ImportAlphaChannel>
+                    </Source>
+                  </Sprite>
+                  <Sprite Slot="152" Width="270" Height="60" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                    <Source>
+                      <FileName>C:\Users\alex\Desktop\Urjc\Narración Guión Storyboard\AgsGame.old\Sprites+Especiales+Grande.png</FileName>
+                      <OffsetX>447</OffsetX>
+                      <OffsetY>1101</OffsetY>
+                      <ImportHeight>60</ImportHeight>
+                      <ImportWidth>270</ImportWidth>
                       <ImportAsTile>True</ImportAsTile>
                       <Frame>0</Frame>
                       <RemapToGamePalette>False</RemapToGamePalette>
@@ -5500,6 +5707,129 @@ stop
                   <ViewFrame>
                     <ID>0</ID>
                     <Image>122</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>16</ID>
+            <Name>TortugaNadar</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>145</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>1</ID>
+                    <Image>146</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>2</ID>
+                    <Image>147</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>3</ID>
+                    <Image>148</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>17</ID>
+            <Name>TortugaAtrapada</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>149</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>1</ID>
+                    <Image>150</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>18</ID>
+            <Name>TortugaBalsa</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <ID>0</ID>
+                    <Image>151</Image>
+                    <Flipped>False</Flipped>
+                    <Delay>0</Delay>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <ID>1</ID>
+                    <Image>152</Image>
                     <Flipped>False</Flipped>
                     <Delay>0</Delay>
                     <Sound>0</Sound>
